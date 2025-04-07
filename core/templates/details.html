@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{% block content %}
+<div class="card mb-3">
+    <img src="{{ gun.imgem.url}}" class="card-img=top" alt="{{gun.name}}">
+    <div class="card-body">
+        <h3 class="card-title">{{gun.name}}</h3>
+        <p class="card-text">{{gun.decription}}</p>
+        <a href="{% url 'home' %}" class="btn btn-secondary">left</a>
+    </div>
+</div>
+{%endblock }

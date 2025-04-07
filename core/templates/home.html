@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% bllock content %}
+<h1>Armas</h1>
+<div class="row">
+    {% for gun in guns %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+        <img src="{{gun.img.url }}" class="card-img-top" alt="{{gun,name}}">
+            <div class="card-body">
+    <h5 class="card-title">{{gun.name}}</h5>
+   <a href="{%url 'details' gun.id %}" class="btn btn-primary">details</a>
+</div>
+    </div> 
+</div>
+{%endfor%}
+</div>
+{% endblock %}
